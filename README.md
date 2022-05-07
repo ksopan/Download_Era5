@@ -1,5 +1,5 @@
 # Introduction
-Dowloading ERA5 0.25^o X 0.25^o resolution hourly reanalysis datasets for Climate model bias-correction. Python code downloads data from [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview). The code automatically download ERA5-Land data and calculates daily minimum, maximum and average Temperature(**t2m**), Dewpoint Temperature(**d2m**),surface winds(**u10,v10**), and surface pressure(**sp**) along with total daily accumulated precipitation (**tp**), evaporation (**e**) and total potential evaporation(**pev**). The donloaded and processed data is in **.grib** format.
+Dowloading ERA5 ![formula](https://render.githubusercontent.com/render/math?math=0.25^{o}) X ![formula](https://render.githubusercontent.com/render/math?math=0.25^{o}) resolution hourly reanalysis datasets for Climate model bias-correction. Python code downloads data from [CDS](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview). The code automatically download ERA5-Land data and calculates daily minimum, maximum and average Temperature(**t2m**), Dewpoint Temperature(**d2m**),surface winds(**u10,v10**), and surface pressure(**sp**) along with total daily accumulated precipitation (**tp**), evaporation (**e**) and total potential evaporation(**pev**). The donloaded and processed data is in **.grib** format.
 
 # Prerequisites
 1. cdsapi (pip install cdsapi)
@@ -9,8 +9,14 @@ Dowloading ERA5 0.25^o X 0.25^o resolution hourly reanalysis datasets for Climat
 ~/.cdsapirc
 ```
 If credentials not available; it can be obtained after creating an account at [LOGIN](https://cds.climate.copernicus.eu/user/login?destination=%2F%23!%2Fhome).
-    
-3. cdo (pip install cdo)
+3. Please install `CDO` on your computer if it's `Linux-Ubuntu` just use
+```bash
+sudo apt-get install cdo
+```
+4. Finally, install `CDO` in Python Env 
+```python
+cdo (pip install cdo)
+```
 
 # Run Code
 ```python
